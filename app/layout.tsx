@@ -11,7 +11,7 @@ const font=Inter({
 
 export const metadata: Metadata = {
   title: "Harish Padmanabhan",
-  description: "Personal Portfolio using Next js",
+  description: "Personal Portfolio",
 };
 
 export default function RootLayout({

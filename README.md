@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Harish Padmanabhan — Portfolio
 
-## Getting Started
+**Live**: [https://harishpadmanabhan.netlify.app/](https://harishpadmanabhan.netlify.app/)
 
-First, run the development server:
+A fast, modern portfolio for a **Data • ML • AI Engineer** showcasing projects, skills, and contact. Built with Next.js, Tailwind, Framer Motion, and deployed on Netlify.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+* **Hero** with typewriter titles and particle background
+* **About** focused on Data/ML/AI engineering
+* **Projects** with galleries (4 screenshots per project)
+* **Skills** grid with 3D tilt
+* **Contact** form powered by Web3Forms (spam-safe, no server)
+* Fully responsive, keyboard accessible, and SEO‑ready
+
+---
+
+## 🧱 Tech Stack
+
+* **Framework**: Next.js (React, TypeScript)
+* **UI**: Tailwind CSS, Framer Motion, react-icons
+* **Effects**: typewriter-effect, react-parallax-tilt, custom ParticleBackground
+* **Forms**: Web3Forms API
+* **Deploy**: Netlify (works great on Vercel too)
+
+---
+
+## 📂 Project Structure (key parts)
+
+```
+app/                # (or pages/) Next.js routes
+  layout.tsx
+  page.tsx
+components/
+  Hero/ParticleBackground.tsx
+  contact/Contact.tsx
+  ...
+lib/
+public/
+  images/
+  Harish_Padmanabhan_Resume.pdf
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> If your project uses the **pages/** router instead of **app/**, adjust accordingly.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+### 1) Install & run
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm i
+npm run dev
+# build for production
+npm run build && npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2) Environment variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create **.env.local** in the root:
 
-## Deploy on Vercel
+```bash
+NEXT_PUBLIC_WEB3FORMS_KEY=your_web3forms_client_key
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can get a key from Web3Forms and paste it here.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3) Expected assets
+
+* **Resume**: `public/Harish_Padmanabhan_Resume.pdf`
+* **Images** used in components:
+
+  * `/images/AboutMyPic.jpg`
+  * Project screenshots (see section below)
+* **OG image** (optional but recommended): `public/og.png`
+* **Favicon**: `public/favicon.ico`
+
+---
+
+## 🖼️ Project Screenshots (placeholders)
+
+Provide **4 images per project** under `public/images/<project>/` and update the data files:
+
+* `data/projects.ts` (or similar):
+
+  * **NL2SQL + RAG**: `/images/NL2SQL/...`
+  * **Stroke Risk**: `/images/Stroke/...`
+  * **EV Charging**: `/images/EV/...`
+
+Example entry:
+
+```ts
+images: [
+  "/images/NL2SQL/01-architecture.png",
+  "/images/NL2SQL/02-training.png",
+  "/images/NL2SQL/03-demo.png",
+  "/images/NL2SQL/04-results.png",
+]
+```
+
+---
+
+## 🔧 Useful Commands
+
+```bash
+npm run lint       # lint
+npm run format     # if you use prettier script
+```
+
+---
+
+## 🔍 SEO metadata (Next 13+)
+
+Add to `app/layout.tsx` (or your head config):
+
+```ts
+export const metadata = {
+  title: "Harish Padmanabhan – Data • ML • AI Engineer",
+  description: "Data Engineer & ML/AI Engineer building reliable, scalable systems.",
+  openGraph: {
+    title: "Harish Padmanabhan – Portfolio",
+    description: "Data • ML • AI Engineer",
+    images: ["/og.png"],
+    url: "https://harishpadmanabhan.netlify.app/",
+    siteName: "Harish Portfolio",
+  },
+  icons: { icon: "/favicon.ico" },
+};
+```
+
+---
+
+## 📬 Contact
+
+* **Email**: [padmanabhan.h@northeastern.edu](mailto:padmanabhan.h@northeastern.edu)
+* **LinkedIn**: [https://www.linkedin.com/in/hp24](https://www.linkedin.com/in/hp24)
+* **GitHub**: [https://github.com/harish2412](https://github.com/harish2412)
+
+---
+
+## 🧪 Pre‑deploy checklist
+
+* [ ] Contact form works (submit test)
+* [ ] Resume link downloads correctly
+* [ ] All image paths resolve (desktop & mobile)
+* [ ] Lighthouse: Performance ≥ 90, Accessibility ≥ 95
+* [ ] 404 page exists
+
+---
+
+## 🛠️ Deployment
+
+**Netlify**: connect your repo → set build command `npm run build` and publish directory `.next` (or let Netlify plugin handle).
+**Vercel**: `Import Project` → defaults work out of the box.
+
+---
+
+## 📄 License
+
+MIT — feel free to reuse this structure with attribution.

@@ -10,7 +10,7 @@ const font=Inter({
 )
 
 export const metadata: Metadata = {
-  title: "Jai Vignesh Ravichandran",
+  title: "Harish Padmanabhan",
   description: "Personal Portfolio using Next js",
 };
 

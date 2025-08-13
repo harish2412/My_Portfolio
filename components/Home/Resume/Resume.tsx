@@ -1,8 +1,8 @@
 import ResumeEmbed from "./ResumeEmbed";
 
 export const metadata = {
-  title: "Resume — Jai Vignesh Ravichandran",
-  description: "View Jai's resume with loader and download.",
+  title: "Resume — Harish Padmanabhan",
+  description: "View Harish's resume with loader and download.",
 };
 
 export default function Resume() {
@@ -14,8 +14,8 @@ export default function Resume() {
         </h1>
 
         <ResumeEmbed
-          src="/Jai_Vignesh_Resume.pdf"
-          fileName="Jai_Vignesh_Ravichandran_Resume.pdf"
+          src="/Harish_Padmanabhan_Resume.pdf"
+          fileName="Harish_Padmanabhan_Resume.pdf"
         />
       </div>
     </section>

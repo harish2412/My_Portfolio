@@ -5,34 +5,51 @@ import { FaCode } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { BiDownload } from "react-icons/bi";
 import Link from "next/link";
+import { Playfair_Display } from "next/font/google";
+import {
+  FiBarChart2,
+  FiPieChart,
+  FiTrendingUp,
+  FiDatabase,
+} from "react-icons/fi";
 
-type Props ={
-    openNav:()=>void;
-}
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: "700",
+  style: ["italic"],
+});
 
-const Nav = ({openNav}:Props) => {
-    const [navBg,setNavbg]=useState(false);
-    useEffect(()=>{
-        const handler =()=>{
-            if(window.scrollY>=90) setNavbg(true);
-            if(window.scrollY<90) setNavbg(false);
+type Props = {
+  openNav: () => void;
+};
 
-        }
-        window.addEventListener("scroll",handler);
-        return ()=> window.addEventListener("scroll",handler);
-
-    },[]);
+const Nav = ({ openNav }: Props) => {
+  const [navBg, setNavbg] = useState(false);
+  useEffect(() => {
+    const handler = () => {
+      if (window.scrollY >= 90) setNavbg(true);
+      if (window.scrollY < 90) setNavbg(false);
+    };
+    window.addEventListener("scroll", handler);
+    return () => window.addEventListener("scroll", handler);
+  }, []);
 
   return (
-    <div className={`transition-all ${navBg? "bg-[#0f142ed9] shadow-md ":"fixed" } duration-200 h-[7vh] z-[10000] fixed w-full`}>
+    <div
+      className={`transition-all ${
+        navBg ? "bg-[#0f142ed9] shadow-md " : "fixed"
+      } duration-200 h-[7vh] z-[10000] fixed w-full`}
+    >
       <div className="flex items-center h-full justify-between w-[90%] mx-auto">
         {/* {LOGO} */}
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center flex-col">
-            <FaCode className="w-5 h-5 text-black" />
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <FiBarChart2 className="w-5 h-5 text-black" /> {/* data source */}
           </div>
-          <h1 className="text-xl hidden sm:block  md:text-2xl text-white font-blod ">
-            JAI VIGNESH
+          <h1
+            className={`${playfair.className} hidden sm:block text-xl md:text-2xl text-white font-bold`}
+          >
+            HARISH PADMANABHAN
           </h1>
         </div>
         {/* {NavLinks} */}
@@ -51,17 +68,20 @@ const Nav = ({openNav}:Props) => {
         </div>
         {/* {HamBurger Icon} */}
         <div className="flex items-center space-x-4">
-            {/* {CV Button} */}
-            <a
-    href="/Jai_Vignesh_Resume.pdf"                         // file must be in /public
-    download="Jai_Vignesh_Ravichandran_Resume.pdf"
-    className="px-8 py-3.5 text-sm rounded-lg bg-blue-800 hover:bg-blue-900 transition-all duration-300 text-white inline-flex items-center space-x-2"
-  >
-    <BiDownload className="w-4 h-4" />
-    <span>Download CV</span>
-  </a>
-            {/* {BURGER MENU} */}
-                <HiBars3BottomRight onClick={openNav}className="w-8 h-8 cursor-pointer text-white lg:hidden"/>
+          {/* {CV Button} */}
+          <a
+            href="/Harish_Padmanabhan_Resume.pdf" // file must be in /public
+            download="Harish_Padmanabhan_Resume.pdf"
+            className="px-8 py-3.5 text-sm rounded-lg bg-blue-800 hover:bg-blue-900 transition-all duration-300 text-white inline-flex items-center space-x-2"
+          >
+            <BiDownload className="w-4 h-4" />
+            <span>Download CV</span>
+          </a>
+          {/* {BURGER MENU} */}
+          <HiBars3BottomRight
+            onClick={openNav}
+            className="w-8 h-8 cursor-pointer text-white lg:hidden"
+          />
         </div>
       </div>
     </div>

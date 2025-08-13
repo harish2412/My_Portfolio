@@ -7,7 +7,6 @@ import {
   FiSend, FiLoader, FiMail, FiGithub, FiLinkedin,
   FiCheckCircle, FiXCircle, FiCopy, FiCheck, FiAlertCircle
 } from "react-icons/fi";
-import { FaInstagram } from "react-icons/fa";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Errors = Partial<Record<"name" | "email" | "subject" | "message", string>>;
@@ -77,7 +76,7 @@ export default function Contact() {
       "bg-[#0f1222] border-white/10 focus:outline-none",
       hasError
         ? "ring-2 ring-rose-400/50 border-rose-400/30 shadow-[0_0_18px_rgba(244,63,94,.25)]"
-        : "focus:ring-2 focus:ring-cyan-400/50 hover:border-white/20"
+        : "focus:ring-2 focus:ring-cyan-400/50 hover:border-white/20",
     ].join(" ");
   }
 
@@ -110,7 +109,7 @@ export default function Contact() {
     }
 
     formData.append("access_key", accessKey);
-    if (!formData.get("subject")) formData.set("subject", "Portfolio Contact");
+    if (!formData.get("subject")) formData.set("subject", "Portfolio Contact — Harish Padmanabhan");
     formData.append("botcheck", "");
 
     const payload = JSON.stringify(Object.fromEntries(formData as any));
@@ -143,7 +142,7 @@ export default function Contact() {
     }
   }
 
-  const email = "ravichandran.ja@northeastern.edu";
+  const email = "padmanabhan.h@northeastern.edu";
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText(email);
@@ -159,7 +158,7 @@ export default function Contact() {
           Get in <span className="text-cyan-400">Touch</span>
         </h2>
         <p className="mt-3 text-center text-slate-300">
-          Have a role, project, or collab in mind? Ping me—happy to chat.
+          Have a role (Data/ML/AI), project, or collab in mind? Ping me—happy to chat.
         </p>
 
         {/* social bar */}
@@ -169,19 +168,11 @@ export default function Contact() {
             href={`mailto:${email}`}
           >
             <FiMail className="h-5 w-5" />
-            <span className="hidden sm:inline">E Mail</span>
+            <span className="hidden sm:inline">Email</span>
           </a>
           <a
             className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-white transition-all hover:border-cyan-400/40 hover:bg-white/10"
-            href="https://www.instagram.com/jai_vicky____/"
-            target="_blank" rel="noreferrer"
-          >
-            <FaInstagram className="h-5 w-5" />
-            <span className="hidden sm:inline">Intagram</span>
-          </a>
-          <a
-            className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-white transition-all hover:border-cyan-400/40 hover:bg-white/10"
-            href="https://www.linkedin.com/in/jai-vignesh-ravichandran-5a79421b8/"
+            href="https://www.linkedin.com/in/hp24/"
             target="_blank" rel="noreferrer"
           >
             <FiLinkedin className="h-5 w-5" />
@@ -189,7 +180,7 @@ export default function Contact() {
           </a>
           <a
             className="group inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-white transition-all hover:border-cyan-400/40 hover:bg-white/10"
-            href="https://github.com/jai-vignesh007"
+            href="https://github.com/harish2412"
             target="_blank" rel="noreferrer"
           >
             <FiGithub className="h-5 w-5" />

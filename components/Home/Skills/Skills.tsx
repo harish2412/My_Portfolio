@@ -2,56 +2,49 @@
 
 import dynamic from 'next/dynamic';
 import React from 'react';
-import { FaJava, FaAws } from 'react-icons/fa';
+import { FaAws } from 'react-icons/fa';
+import { BiBarChart } from "react-icons/bi";
+import { DiMsqlServer } from "react-icons/di";
 import {
-  SiJavascript, SiTypescript, SiReact, SiNodedotjs, SiSpringboot, SiFlutter,
-  SiPython, SiC, SiCplusplus, SiDart, SiExpress, SiSequelize, SiFlask,
-  SiHtml5, SiCss3, SiBootstrap, SiJsonwebtokens, SiAxios, SiJest, SiSocketdotio,
-  SiMongodb, SiPostgresql, SiFirebase, SiGooglecloud, SiTerraform, SiPacker,
-  SiDocker, SiGithubactions, SiLinux, SiOpenai, SiReactrouter
+  SiPython, SiReact, SiNodedotjs,
+  SiTableau, SiPytorch, SiScikitlearn, SiHuggingface, SiApacheairflow,
+  SiGooglecloud, SiDocker, SiGithubactions, SiLinux, SiOpenai,
+  SiMongodb, SiMysql, SiAmazons3, SiApachekafka,
+  SiJupyter, SiGooglecolab, SiSqlite
 } from 'react-icons/si';
 import { TbSql } from 'react-icons/tb';
 
 const Tilt = dynamic(() => import('react-parallax-tilt'), { ssr: false });
 
+// — Focus: only skills used across Harish's projects and core stack —
 const skills = [
-  { id: 'javascript', name: 'JavaScript (ES6+)', icon: <SiJavascript /> },
-  { id: 'typescript', name: 'TypeScript', icon: <SiTypescript /> },
-  { id: 'react', name: 'React', icon: <SiReact /> },
-  { id: 'react-router', name: 'React Router', icon: <SiReactrouter /> },
-  { id: 'node', name: 'Node.js', icon: <SiNodedotjs /> },
-  { id: 'express', name: 'Express.js', icon: <SiExpress /> },
-  { id: 'springboot', name: 'Spring Boot', icon: <SiSpringboot /> },
-  { id: 'java', name: 'Java', icon: <FaJava /> },
   { id: 'python', name: 'Python', icon: <SiPython /> },
-  { id: 'c', name: 'C', icon: <SiC /> },
-  { id: 'cplusplus', name: 'C++', icon: <SiCplusplus /> },
-  { id: 'dart', name: 'Dart', icon: <SiDart /> },
-  { id: 'flutter', name: 'Flutter', icon: <SiFlutter /> },
-  { id: 'sequelize', name: 'Sequelize ORM', icon: <SiSequelize /> },
-  { id: 'flask', name: 'Flask', icon: <SiFlask /> },
+  { id: 'sql', name: 'SQL', icon: <TbSql /> },
+  { id: 'pytorch', name: 'PyTorch', icon: <SiPytorch /> },
+  { id: 'sklearn', name: 'scikit-learn', icon: <SiScikitlearn /> },
+  { id: 'huggingface', name: 'Transformers (HF)', icon: <SiHuggingface /> },
+  { id: 'airflow', name: 'Apache Airflow', icon: <SiApacheairflow /> },
+  { id: 'aws', name: 'AWS', icon: <FaAws /> },
+  { id: 'gcp', name: 'GCP', icon: <SiGooglecloud /> },
+  { id: 'docker', name: 'Docker', icon: <SiDocker /> },
+  { id: 'linux', name: 'Linux / Shell', icon: <SiLinux /> },
+  { id: 'react', name: 'React (UI)', icon: <SiReact /> },
+  { id: 'node', name: 'Node.js (APIs)', icon: <SiNodedotjs /> },
 ];
 
 const tools = [
-  { id: 'html5', name: 'HTML5', icon: <SiHtml5 /> },
-  { id: 'css3', name: 'CSS3', icon: <SiCss3 /> },
-  { id: 'bootstrap', name: 'Bootstrap', icon: <SiBootstrap /> },
-  { id: 'rest', name: 'REST / API Design', icon: <SiOpenai /> }, // swap if you prefer OpenAPI icon
-  { id: 'jwt', name: 'JWT / RBAC', icon: <SiJsonwebtokens /> },
-  { id: 'axios', name: 'Axios', icon: <SiAxios /> },
-  { id: 'websockets', name: 'WebSockets', icon: <SiSocketdotio /> },
-  { id: 'jest', name: 'Jest', icon: <SiJest /> },
-  { id: 'mongodb', name: 'MongoDB Atlas', icon: <SiMongodb /> },
-  { id: 'postgres', name: 'PostgreSQL', icon: <SiPostgresql /> },
-  { id: 'firebase', name: 'Firebase', icon: <SiFirebase /> },
-  { id: 'sql', name: 'SQL', icon: <TbSql /> },
-  { id: 'aws', name: 'AWS', icon: <FaAws /> },
-  { id: 'gcp', name: 'GCP', icon: <SiGooglecloud /> },
-  { id: 'terraform', name: 'Terraform', icon: <SiTerraform /> },
-  { id: 'packer', name: 'Packer', icon: <SiPacker /> },
-  { id: 'docker', name: 'Docker', icon: <SiDocker /> },
+  { id: 'mysql', name: 'MySQL', icon: <SiMysql /> },
+  { id: 'sqlserver', name: 'SQL Server', icon: <DiMsqlServer /> },
+  { id: 'sqlite', name: 'SQLite', icon: <SiSqlite /> },
+  { id: 'mongodb', name: 'MongoDB', icon: <SiMongodb /> },
+  { id: 's3', name: 'Amazon S3', icon: <SiAmazons3 /> },
+  { id: 'kafka', name: 'Apache Kafka', icon: <SiApachekafka /> },
+  { id: 'tableau', name: 'Tableau', icon: <SiTableau /> },
+  { id: 'powerbi', name: 'Power BI', icon: <BiBarChart /> },
   { id: 'gha', name: 'GitHub Actions', icon: <SiGithubactions /> },
-  { id: 'linux', name: 'Linux / Shell', icon: <SiLinux /> },
+  { id: 'jupyter', name: 'Jupyter Notebook', icon: <SiJupyter /> },
+  { id: 'colab', name: 'Google Colab', icon: <SiGooglecolab /> },
+  
   { id: 'openai', name: 'OpenAI API', icon: <SiOpenai /> },
 ];
 
@@ -71,11 +64,11 @@ export default function Skills() {
     <section id="skills" className="relative py-16 md:py-24">
       <div className="mx-auto w-[90%] max-w-7xl">
         <h1 className="text-white text-center text-2xl md:text-4xl xl:text-5xl font-bold">
-          My Professional <span className="text-cyan-300">Skills</span>
+          My <span className="text-cyan-300">Data · ML · AI</span> Stack
         </h1>
 
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
-          {skills.map(s => (
+        <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {skills.map((s) => (
             <Tilt
               key={s.id}
               tiltMaxAngleX={30}
@@ -98,8 +91,8 @@ export default function Skills() {
           Tools I <span className="text-cyan-300">Use</span>
         </h2>
 
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
-          {tools.map(t => (
+        <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {tools.map((t) => (
             <Tilt
               key={t.id}
               tiltMaxAngleX={30}

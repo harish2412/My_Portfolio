@@ -4,14 +4,14 @@ import Image from "next/image";
 import { HiOutlineCalendarDays, HiOutlineMapPin } from "react-icons/hi2";
 import { FiExternalLink } from "react-icons/fi";
 import React from "react";
-import ParticleBackground from "../Hero/ParticleBackground"
+import ParticleBackground from "../Hero/ParticleBackground";
 
 type Edu = {
   school: string;
   degree: string;
   period: string;
   location: string;
-  logo: string;   // e.g. "/logos/neu.png"
+  logo: string; // e.g. "/images/neu.png"
   website: string;
   bullets: string[];
 };
@@ -19,38 +19,41 @@ type Edu = {
 const EDUCATION: Edu[] = [
   {
     school: "Northeastern University",
-    degree: "MS in Software Engineering Systems",
-    period: "Aug 2024 – Dec 2026",
+    degree: "M.S. in Data Analytics Engineering (GPA: 3.81/4.00)",
+    period: "Sep 2024 – May 2026",
     location: "Boston, MA, USA",
     logo: "/images/NEULOGO.png",
     website: "https://www.northeastern.edu/",
     bullets: [
-      "Coursework: Application Engineering, Web Design & UX, Cloud/Networking, Program Structures & Algorithms.",
-      "Built microservices and optimized backend performance with Java/Spring Boot & Node.",
-      "Strong foundation in software engineering principles and DevOps practices.",
+      "Coursework: Foundations of Data Analytics, Data Management for Analytics, Computation & Visualization, Data Mining in Engineering, Large Language Models.",
+      "Built batch & streaming data pipelines with Airflow/AWS Glue and modeled data in PostgreSQL/Redshift.",
+      "Applied ML for NL2SQL, predictive analytics, and dashboarding in Python (Pandas, scikit‑learn) and Tableau/Power BI.",
     ],
   },
   {
-    school: "Sri Sairam Engineering college (Anna University)",
-    degree: "B.Tech in Computer Science & Business Systems",
-    period: "Sep 2020 – May 2024",
+    school: "Anna University",
+    degree: "B.E. in Mechanical Engineering (GPA: 8.21/10.00)",
+    period: "Aug 2018 – Apr 2022",
     location: "Chennai, TN, India",
-    logo: "/images/Sairam.png",
-    website: "https://sairam.edu.in/",
+    logo: "/images/AnnaUniLogo.png",
+    website: "https://www.annauniv.edu/",
     bullets: [
-      "Core CS: Data Structures, Algorithms, DBMS, OS, Networks, AI.",
-      "Electives: Cloud Computing, Deep Learning, Full-Stack Development.",
-      "Hands-on projects across OOP, compiler design, and software engineering.",
+      "Coursework: Python Programming, Statistics & Numerical Methods; foundations in data analysis and computation.",
+      "Hands‑on projects emphasizing problem solving, quantitative analysis, and technical communication.",
+      "Transitioned interests toward data engineering and ML applications through electives and projects.",
     ],
   },
 ];
 
 const Education = () => {
   return (
-    
     <section id="education" className="relative py-16 md:py-24">
-       
-      <div className="mx-auto w-[90%] max-w-7xl">
+      {/* Optional background effect */}
+      <div className="pointer-events-none absolute inset-0 opacity-40">
+        <ParticleBackground />
+      </div>
+
+      <div className="relative mx-auto w-[90%] max-w-7xl">
         <h2 className="mb-10 text-center text-3xl font-extrabold text-white md:mb-14 md:text-5xl">
           Degrees <span className="text-cyan-400">Received</span>
         </h2>

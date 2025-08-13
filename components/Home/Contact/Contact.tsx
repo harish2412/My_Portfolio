@@ -7,7 +7,7 @@ import {
   FiSend, FiLoader, FiMail, FiGithub, FiLinkedin,
   FiCheckCircle, FiXCircle, FiCopy, FiCheck, FiAlertCircle
 } from "react-icons/fi";
-
+//summa
 type Status = "idle" | "loading" | "success" | "error";
 type Errors = Partial<Record<"name" | "email" | "subject" | "message", string>>;
 

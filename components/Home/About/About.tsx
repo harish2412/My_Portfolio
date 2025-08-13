@@ -123,7 +123,7 @@ const About = () => {
 
             <div className="mt-4 flex items-center justify-center gap-2 text-xs text-slate-300">
               <span className="rounded-full bg-white/5 px-2 py-1">
-                Northeastern University — MS DAE ’26
+                Northeastern University — MS DAE ’ 26
               </span>
               <span className="hidden rounded-full bg-white/5 px-2 py-1 md:inline">
                 Boston, MA

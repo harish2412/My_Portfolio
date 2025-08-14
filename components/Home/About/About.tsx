@@ -125,7 +125,7 @@ const About = () => {
               <span className="rounded-full bg-white/5 px-2 py-1">
                 Northeastern University — MS DAE ’ 26
               </span>
-              <span className="hidden rounded-full bg-white/5 px-2 py-1 md:inline">
+              <span className= "hidden rounded-full bg-white/5 px-2 py-1 md:inline">
                 Boston, MA
               </span>
             </div>

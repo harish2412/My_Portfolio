@@ -10,8 +10,8 @@ type Props = {
 };
 
 export default function ResumeEmbed({
-  src = "/Jai_Vignesh_Resume.pdf",
-  fileName = "Jai_Vignesh_Resume.pdf",
+  src = "/Harish_Padmanabhan_Resume.pdf",
+  fileName = "Harish_Padmanabhan_Resume.pdf",
 }: Props) {
   const [loading, setLoading] = useState(true);
   const [stuck, setStuck] = useState(false);

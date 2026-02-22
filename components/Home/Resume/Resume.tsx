@@ -2,7 +2,7 @@ import ResumeEmbed from "./ResumeEmbed";
 
 export const metadata = {
   title: "Resume — Harish Padmanabhan",
-  description: "View Harish's resume with loader and download.",
+  description: "View Harish's resume and download.",
 };
 
 export default function Resume() {

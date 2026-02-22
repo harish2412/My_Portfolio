@@ -13,7 +13,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
     "framer-motion": "^12.23.12",
-    "next": "15.4.4",
+    "next": "15.4.10",
     "nodemailer": "^7.0.5",
     "pdfjs-dist": "^5.4.54",
     "react": "19.1.0",

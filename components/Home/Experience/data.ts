@@ -20,9 +20,9 @@ export const EXPERIENCE: Exp[] = [
     role: "Data Engineer Intern",
     period: "Aug 2022 – Jan 2023",
     location: "Chennai, India",
-    logo: "/images/InfosysLogo.png",
+    logo: "/images/KCCLogo.jpg",
     bullets: [
-      "Migrated on-prem ETL workflows to AWS Glue and Snowflake, cutting infrastructure costs by 35%.",
+      "Enhanced and maintained \textbf{ETL pipelines} handling lease, asset, and payment data from financial systems, eliminating manual Excel errors and cutting data latency by 70\%",
       "Developed Python automation scripts to process multi-format API data (CSV, JSON, XML) into PostgreSQL, reducing upload time from 4 hours to 15 minutes.",
       "Implemented data validation pipelines with Pandas and Great Expectations, ensuring 98% accuracy before production loads.",
     ],

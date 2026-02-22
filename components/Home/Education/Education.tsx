@@ -35,7 +35,7 @@ const EDUCATION: Edu[] = [
     degree: "B.E. in Mechanical Engineering (GPA: 8.21/10.00)",
     period: "Aug 2018 – Apr 2022",
     location: "Chennai, TN, India",
-    logo: "/images/AnnaUniLogo.png",
+    logo: "/images/AU.jpg",
     website: "https://www.annauniv.edu/",
     bullets: [
       "Coursework: Python Programming, Statistics & Numerical Methods; foundations in data analysis and computation.",
